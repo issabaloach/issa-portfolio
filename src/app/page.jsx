@@ -15,7 +15,7 @@ export default function Home() {
         latestEntry={latestShipped}
         latestProject={latestProject}
       />
-      <Changelog openProjectId={latestShipped?.project} />
+      <Changelog />
     </main>
   );
 }

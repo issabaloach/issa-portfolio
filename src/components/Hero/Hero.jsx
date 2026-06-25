@@ -3,7 +3,7 @@
 const STATS = [
   { lab: "products shipped", val: "7", delta: "across 2 years" },
   { lab: "production uptime", val: "99.9%", delta: "across all deploys" },
-  { lab: "stacks owned", val: "MERN · NestJS · Py", delta: "backend-leaning full-stack" },
+  { lab: "stack", val: "MERN · NestJS · Py", delta: "backend-leaning full-stack" },
   { lab: "since", val: "2022", delta: "first commit, BS CS" },
 ];
 

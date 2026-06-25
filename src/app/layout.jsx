@@ -15,6 +15,9 @@ import Footer from "../components/Footer/Footer";
 export const metadata = {
   title: "Muhammad Issa - Portfolio",
   description: "Backend-leaning full-stack developer based in Karachi.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({ children }) {

@@ -98,7 +98,7 @@ export const ENTRIES = [
     ver: "v1.5.0",
     date: "2025-01-30",
     typ: "milestone",
-    title: "Completed Web & Mobile App Development at Saylani.",
+    title: "Completed Web & Mobile App Development at Saylani Mass I.T.",
     body: "Thirteen months. The point of departure from CS theory toward shipping things real users would touch.",
   },
   {
