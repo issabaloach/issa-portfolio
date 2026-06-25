@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useMemo } from "react";
 import { ENTRIES } from "../../data/entries";
 import { PROJECTS } from "../../data/projects";

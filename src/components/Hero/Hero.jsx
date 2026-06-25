@@ -1,3 +1,5 @@
+"use client";
+
 const STATS = [
   { lab: "products shipped", val: "7", delta: "across 2 years" },
   { lab: "production uptime", val: "99.9%", delta: "across all deploys" },
@@ -5,7 +7,7 @@ const STATS = [
   { lab: "since", val: "2022", delta: "first commit, BS CS" },
 ];
 
-export default function Hero({ latestEntry, latestProject, onJump }) {
+export default function Hero({ latestEntry, latestProject }) {
   return (
     <header className="hero page">
       <div className="hero-grid">
@@ -41,7 +43,6 @@ export default function Hero({ latestEntry, latestProject, onJump }) {
         <LatestReleaseCard
           entry={latestEntry}
           project={latestProject}
-          onReadMore={() => onJump("changelog")}
         />
       </div>
 
@@ -58,7 +59,7 @@ export default function Hero({ latestEntry, latestProject, onJump }) {
   );
 }
 
-function LatestReleaseCard({ entry, project, onReadMore }) {
+function LatestReleaseCard({ entry, project }) {
   return (
     <div className="latest-card">
       <div className="label-bar">
@@ -82,11 +83,7 @@ function LatestReleaseCard({ entry, project, onReadMore }) {
           </div>
         )}
         <div className="cta-row">
-          <button className="btn btn-primary" onClick={onReadMore}>
-            <span>read release notes</span>
-            <span>→</span>
-          </button>
-          {project && <a className="btn btn-ghost" href="#">visit live ↗</a>}
+          {project && <a className="btn btn-ghost" href={project.link || "#"} target="_blank" rel="noopener noreferrer">visit live ↗</a>}
         </div>
       </div>
     </div>

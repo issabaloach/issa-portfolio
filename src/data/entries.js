@@ -1,5 +1,14 @@
 export const ENTRIES = [
   {
+    ver: "v3.6.0",
+    date: "2026-05-15",
+    typ: "shipped",
+    title: "Shipped Bruce Davidson Productions — ebook web app.",
+    project: "brucedavidson",
+    body: "A full-stack Next.js platform built for an American client to sell and distribute ebooks securely. Integrated with Prisma, NeonDB, NextAuth, and PayPal.",
+    featured: true,
+  },
+  {
     ver: "v3.5.0",
     date: "2026-04-22",
     typ: "journal",
@@ -7,8 +16,6 @@ export const ENTRIES = [
     body: "A short writeup on what I learned wiring four SaaS products in one year — what the patterns were, what I'd copy, what I'd throw away.",
     body2:
       "Posted to the writing log. About 1400 words on tenancy boundaries, cron-driven enforcement, and why I default to gateway-first NestJS architectures.",
-    href: "#",
-    hrefLabel: "read the post",
   },
   {
     ver: "v3.4.0",
@@ -48,7 +55,6 @@ export const ENTRIES = [
     title: "Shipped NeuroScan AI — brain MRI classifier (95% accuracy).",
     project: "neuroscan",
     body: "4-way brain tumor classification with real-time inference on CPU-only cloud. Triage results in under 4 seconds.",
-    featured: true,
   },
   {
     ver: "v2.4.0",

@@ -24,8 +24,12 @@ export default function CaseStudy({ project }) {
 
       <div className="case-grid">
         <div>
-          <div className="case-screenshot">
-            <span>{project.name} screenshot</span>
+          <div className="case-screenshot" style={{ padding: project.image ? 0 : undefined, overflow: 'hidden' }}>
+            {project.image ? (
+              <img src={project.image} alt={`${project.name} screenshot`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+            ) : (
+              <span>{project.name} screenshot</span>
+            )}
           </div>
 
           <div className="case-section" style={{ marginTop: 26 }}>
@@ -116,12 +120,12 @@ function CaseSidebar({ project }) {
       <div className="group">
         <h5>Links</h5>
         <div className="links">
-          <a href="#">
+          <a href={project.link || "#"} target="_blank" rel="noopener noreferrer">
             <span>Visit live</span>
             <span style={{ color: "var(--accent)" }}>↗</span>
           </a>
-          <a href="#">
-            <span>Source</span>
+          <a href="https://github.com/issabaloach" target="_blank" rel="noopener noreferrer">
+            <span>GitHub Profile</span>
             <span style={{ color: "var(--accent)" }}>↗</span>
           </a>
         </div>

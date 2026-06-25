@@ -1,8 +1,9 @@
 export const SKILLS = {
   Frontend: ["React", "Next.js", "TypeScript", "shadcn/ui", "Tailwind", "Web Audio"],
-  Backend: ["NestJS", "Node.js", "Express", "REST", "WebSockets", "Cron"],
-  Data: ["MongoDB", "MySQL", "Firebase", "S3", "Sharding", "Schema design"],
+  Backend: ["NestJS", "Node.js", "Express", "REST", "WebSockets", "Cronjobs"],
+  Data: ["MongoDB", "MySQL", "NeonDB", "Firebase", "S3", "Sharding", "Schema design"],
   Tools: ["Git", "Docker", "Vercel", "Figma", "Postman", "Ngrok"],
+  Integrations: ["ZKTeco", "Hikvision", "Hardware Devices"],
 };
 
 export const JOBS = [
@@ -50,6 +51,6 @@ export const EDUCATION = [
 export const CONTACT_CHANNELS = [
   { label: "email", value: "muhammadissa848@gmail.com", href: "mailto:muhammadissa848@gmail.com" },
   { label: "phone", value: "+92 342 1461997", href: "tel:+923421461997" },
-  { label: "github", value: "/muhammadissa ↗", href: "https://github.com/muhammadissa", external: true },
+  { label: "github", value: "/issabaloach ↗", href: "https://github.com/issabaloach", external: true },
   { label: "linkedin", value: "/in/muhammadissa ↗", href: "https://linkedin.com/in/muhammadissa", external: true },
 ];

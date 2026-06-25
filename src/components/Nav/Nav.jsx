@@ -1,31 +1,35 @@
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import MoonIcon from "../ui/MoonIcon";
 
 const NAV_LINKS = [
-  { id: "changelog", num: "01", label: "Changelog" },
-  { id: "about", num: "02", label: "About" },
-  { id: "contact", num: "03", label: "Contact" },
+  { id: "/", num: "01", label: "Changelog" },
+  { id: "/about", num: "02", label: "About" },
+  { id: "/contact", num: "03", label: "Contact" },
 ];
 
-export default function Nav({ activeSection, onJump, onToggleTheme, onOpenCmdk }) {
+export default function Nav({ onToggleTheme, onOpenCmdk }) {
+  const pathname = usePathname();
+  
   return (
     <nav className="nav">
       <div className="nav-inner">
-        <a className="nav-brand" onClick={() => onJump("top")}>
+        <Link href="/" className="nav-brand">
           <span className="bmark">i</span>
           <b>muhammad_issa</b>
           <small>/ engineer</small>
-        </a>
+        </Link>
 
         <div className="nav-links">
           {NAV_LINKS.map((link) => (
-            <a
+            <Link
               key={link.id}
-              className={activeSection === link.id ? "cur" : ""}
-              onClick={() => onJump(link.id)}
+              href={link.id}
+              className={pathname === link.id ? "cur" : ""}
             >
               <span className="lab-num">{link.num}</span>
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 

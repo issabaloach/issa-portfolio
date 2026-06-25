@@ -1,13 +1,45 @@
 export const PROJECTS = {
+  brucedavidson: {
+    name: "Bruce Davidson Productions",
+    tagline: "Ebook web app with integrated payments.",
+    blurb:
+      "A bespoke platform for an American client to sell and distribute their ebooks securely. Integrated with PayPal for seamless checkout.",
+    role: "Full-stack developer",
+    domain: "brucedavidsonproductions.com",
+    link: "https://www.brucedavidsonproductions.com/",
+    image: "/images/brucedavidson.jpg",
+    year: "2026",
+    stack: ["Next.js", "Prisma", "NeonDB", "NextAuth", "PayPal"],
+    metrics: [
+      ["type", "ebook app"],
+      ["auth", "NextAuth"],
+      ["payments", "PayPal"],
+      ["db", "NeonDB"],
+    ],
+    context:
+      "The American client needed a custom, branded platform to distribute their ebooks directly to customers without relying on third-party marketplaces.",
+    approach: [
+      "Next.js App Router for fast page loads and solid SEO.",
+      "NeonDB and Prisma to provide a resilient, type-safe data layer.",
+      "NextAuth for secure session management and PayPal for immediate checkout.",
+    ],
+    tradeoffs: [
+      "Opted for NextAuth over managed identity providers to retain full control over the user data and authentication flow.",
+    ],
+    arch: ["Next.js client", "NextAuth API", "Prisma ORM", "NeonDB", "PayPal"],
+  },
+
   neuroscan: {
     name: "NeuroScan AI",
     tagline: "Brain tumor MRI classifier with diagnostic-grade accuracy.",
     blurb:
-      "A Next.js + Python web app that classifies brain MRI scans into four tumor categories. Optimized to run real-time inference on CPU-only cloud infrastructure — no GPU dependency, no per-request cost spike.",
+      "A Nextjs + Python web app that classifies brain MRI scans into four tumor categories. Optimized to run real-time inference on CPU-only cloud infrastructure — no GPU dependency, no per-request cost spike.",
     role: "Full-stack engineer + ML pipeline",
-    domain: "neuroscan.muhammadissa.dev",
-    year: "2025",
-    stack: ["Next.js", "Python", "TensorFlow", "FastAPI", "Vercel"],
+    domain: "brain-tumor-web-smiu.vercel.app",
+    link: "https://brain-tumor-web-smiu.vercel.app/",
+    image: "/images/braintumor.jpg",
+    year: "2026",
+    stack: ["Nextjs", "Python", "TensorFlow", "FastAPI", "Vercel"],
     metrics: [
       ["classification accuracy", "95%"],
       ["p95 inference", "3.8s"],
@@ -33,15 +65,17 @@ export const PROJECTS = {
     tagline: "Full-stack music marketplace with in-browser audio tooling.",
     blurb:
       "A marketplace where artists upload tracks, get rated, and earn revenue. Direct-to-storage uploads bypass the server entirely; the clipping engine runs in the browser.",
-    role: "Lead engineer",
+    role: "Full-stack engineer",
     domain: "globalmusicrater.com",
-    year: "2025",
-    stack: ["React", "Node", "Express", "MongoDB", "AWS S3", "Stripe"],
+    link: "https://www.globalmusicrater.com/",
+    image: "/images/globalmusicrater.jpg",
+    year: "2026",
+    stack: ["Nextjs", "Node", "Express", "MongoDB", "AWS S3", "Stripe"],
     metrics: [
       ["upload pipeline", "direct-to-S3"],
       ["clip engine", "in-browser"],
       ["payouts", "automated"],
-      ["stack", "MERN"],
+      ["stack", "Nextjs",""],
     ],
     context:
       "Existing music platforms either lock artists into bad revenue terms or require ops-heavy admin work. The product brief was: let an artist upload, sample, and earn — without the platform touching the audio bytes more than necessary.",
@@ -63,8 +97,10 @@ export const PROJECTS = {
       "A platform that runs the back-office for gyms — members, attendance, subscriptions, billing — with cron-driven enforcement that keeps the data honest without staff intervention.",
     role: "Backend lead",
     domain: "procheckgym.com",
-    year: "2025",
-    stack: ["NestJS", "MongoDB", "React", "Cron", "Docker"],
+    link: "https://www.procheckgym.com/",
+    image: "/images/procheckgym.jpg",
+    year: "2026",
+    stack: ["ExpressJs", "MongoDB","Neondb", "Nextjs", "Cron", "Docker"],
     metrics: [
       ["modules", "6"],
       ["cron jobs", "4"],
@@ -91,6 +127,8 @@ export const PROJECTS = {
       "A multi-tenant SaaS managing point-of-sale, inventory, vendor relationships and invoicing for retailers. Built API-first so the same backend powers POS terminals, admin web, and (eventually) mobile.",
     role: "Backend architect",
     domain: "asankarobar.biz",
+    link: "https://www.asankarobar.biz/",
+    image: "/images/asankarobar.jpg",
     year: "2025",
     stack: ["NestJS", "MongoDB", "REST", "Docker"],
     metrics: [
@@ -119,6 +157,7 @@ export const PROJECTS = {
       "A live 1-to-1 tutoring frontend built end-to-end: student onboarding, teacher dashboards, scheduling, payment flows. Production-ready and responsive across devices.",
     role: "Frontend lead",
     domain: "onlineteachers1to1.com",
+    link: "https://onlineteachers1to1.com/",
     year: "2025",
     stack: ["Next.js", "shadcn/ui", "Tailwind", "REST APIs"],
     metrics: [
@@ -141,14 +180,16 @@ export const PROJECTS = {
   },
 
   attendance: {
-    name: "Employee Attendance System",
-    tagline: "Biometric attendance pipeline at Bright Solutions — backend lead.",
+    name: "Attendyfy",
+    tagline: "Biometric attendance pipeline at Bright Solutions — backend.",
     blurb:
-      "A NestJS backend that handles thousands of daily check-ins from ZKBioTime biometric devices. Solved a hairy connectivity problem with secure tunneling so remote devices talk to the local server without firewall gymnastics.",
+      "A backend that handles thousands of daily check-ins from ZKBioTime biometric devices. Solved a hairy connectivity problem with secure tunneling so remote devices talk to the local server without firewall gymnastics.",
     role: "Backend developer",
     domain: "internal · bright solutions",
+    link: "https://www.attendyfy.com/",
+    image: "/images/attendyfy.jpg",
     year: "2025",
-    stack: ["NestJS", "MongoDB", "Ngrok", "ZKBioTime"],
+    stack: ["Expressjs", "MongoDB", "Neondb", "Ngrok", "ZKBioTime", "Hikvision", ""],
     metrics: [
       ["daily check-ins", "thousands"],
       ["data accuracy", "100%"],
@@ -175,6 +216,8 @@ export const PROJECTS = {
       "Built a responsive recipe app with search, filters and real-time data updates. Small project, mostly a vehicle to learn Firebase fluency.",
     role: "Solo build",
     domain: "perfect-recipe-orcin.vercel.app",
+    link: "https://perfect-recipe-orcin.vercel.app/",
+    image: "/images/reciper.jpg",
     year: "2024",
     stack: ["React", "Firebase"],
     metrics: [

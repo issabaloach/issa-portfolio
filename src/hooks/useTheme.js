@@ -2,8 +2,11 @@ import { useState, useEffect, useCallback } from "react";
 
 export function useTheme(initialTheme = "light") {
   const [theme, setTheme] = useState(() => {
-    const stored = localStorage.getItem("portfolio-theme");
-    return stored || initialTheme;
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("portfolio-theme");
+      return stored || initialTheme;
+    }
+    return initialTheme;
   });
 
   useEffect(() => {

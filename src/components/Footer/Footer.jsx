@@ -1,24 +1,26 @@
-export default function Footer({ onJump }) {
+"use client";
+
+import Link from "next/link";
+
+export default function Footer() {
   return (
     <footer className="foot page">
       <div className="colophon">
-        Set in <b style={{ color: "var(--ink)" }}>Fraunces</b> and{" "}
-        <b style={{ color: "var(--ink)" }}>Inter</b>, with{" "}
-        <b style={{ color: "var(--ink)" }}>JetBrains Mono</b> for the engineering
-        chatter. Built quietly in Karachi. The whole site is, in spirit, just one
-        long release log.
+        Engineered with <b style={{ color: "var(--ink)" }}>Next.js</b> and{" "}
+        <b style={{ color: "var(--ink)" }}>NestJS</b>. A backend-leaning full-stack developer specializing in the{" "}
+        <b style={{ color: "var(--ink)" }}>MERN stack</b>, robust API design, and building scalable systems. Built quietly in Karachi.
       </div>
 
       <div>
         <h6>Index</h6>
-        <a onClick={() => onJump("changelog")}>Changelog</a>
-        <a onClick={() => onJump("about")}>About</a>
-        <a onClick={() => onJump("contact")}>Contact</a>
+        <Link href="/">Changelog</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </div>
 
       <div>
         <h6>Elsewhere</h6>
-        <a href="https://github.com/muhammadissa" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/issabaloach" target="_blank" rel="noopener noreferrer">
           GitHub ↗
         </a>
         <a href="https://linkedin.com/in/muhammadissa" target="_blank" rel="noopener noreferrer">
@@ -28,7 +30,7 @@ export default function Footer({ onJump }) {
 
       <div className="copy">
         <span>© 2026 muhammad issa · karachi</span>
-        <a onClick={() => onJump("top")} style={{ cursor: "pointer" }}>
+        <a onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} style={{ cursor: "pointer" }}>
           v2026.05 · ↑ back to top
         </a>
       </div>

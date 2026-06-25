@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect, useRef, useMemo } from "react";
 import { PROJECTS } from "../../data/projects";
 import { ENTRIES } from "../../data/entries";
@@ -20,8 +22,8 @@ export default function CmdK({ onClose, onJump, onToggleTheme }) {
 
   const items = useMemo(() => {
     const navItems = [
-      { kind: "nav", ico: "↑", name: "Hero", hint: "top of page", action: () => { onJump("top"); onClose(); } },
-      { kind: "nav", ico: "◷", name: "Changelog", hint: "all releases", action: () => { onJump("changelog"); onClose(); } },
+      { kind: "nav", ico: "↑", name: "Home", hint: "home page", action: () => { onJump(""); onClose(); } },
+      { kind: "nav", ico: "◷", name: "Changelog", hint: "all releases", action: () => { onJump(""); onClose(); } },
       { kind: "nav", ico: "@", name: "About", hint: "bio · experience", action: () => { onJump("about"); onClose(); } },
       { kind: "nav", ico: "✉", name: "Contact", hint: "email · github · linkedin", action: () => { onJump("contact"); onClose(); } },
     ];
@@ -35,17 +37,14 @@ export default function CmdK({ onClose, onJump, onToggleTheme }) {
         const entry = ENTRIES.find((e) => e.project === key);
         if (entry) {
           onClose();
-          setTimeout(() => {
-            document.getElementById(`entry-${entry.ver.replace(/\W/g, "")}`)
-              ?.scrollIntoView({ block: "start", behavior: "smooth" });
-          }, 50);
+          window.location.href = `/#entry-${entry.ver.replace(/\W/g, "")}`;
         }
       },
     }));
 
     const actionItems = [
       { kind: "action", ico: "✦", name: "Toggle theme", hint: "light · dark", action: () => { onToggleTheme(); onClose(); } },
-      { kind: "action", ico: "↗", name: "Open GitHub", hint: "github.com/muhammadissa", action: () => { window.open("https://github.com/muhammadissa", "_blank"); onClose(); } },
+      { kind: "action", ico: "↗", name: "Open GitHub", hint: "github.com/issabaloach", action: () => { window.open("https://github.com/issabaloach", "_blank"); onClose(); } },
       { kind: "action", ico: "↗", name: "Email Issa", hint: "muhammadissa848@gmail.com", action: () => { window.location.href = "mailto:muhammadissa848@gmail.com"; onClose(); } },
     ];
 

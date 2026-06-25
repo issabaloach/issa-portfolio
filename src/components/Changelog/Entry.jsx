@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import StackList from "../ui/StackList";
 import CaseStudy from "./CaseStudy";
@@ -34,7 +36,7 @@ export default function Entry({ entry, project, defaultOpen }) {
 
         {project && (
           <div className="entry-meta-row">
-            <span className="domain">→ <a href="#">{project.domain}</a></span>
+            <span className="domain">→ <a href={project.link || "#"} target="_blank" rel="noopener noreferrer">{project.domain}</a></span>
             <StackList items={project.stack} max={5} />
           </div>
         )}
