@@ -1,0 +1,171 @@
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+
+   Typography, spacing, and padding scale fluidly via clamp()
+   in variables.css and base component styles.
+
+   These breakpoints handle LAYOUT changes only:
+   — grid column shifts
+   — component visibility
+   — structural reflows
+   ============================================================ */
+
+/* ---- TABLET (≤920px) ---- */
+
+@media (max-width: 920px) {
+
+  /* stacked grids */
+  .hero-grid,
+  .about-grid,
+  .contact-grid,
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+  .hero-stats .item {
+    border-right: none;
+    padding: 0;
+  }
+  .hero-stats .item:not(:first-child) { padding-left: 0; }
+
+  /* hide desktop nav links */
+  .nav-links { display: none; }
+  .nav-inner { grid-template-columns: auto 1fr; }
+  .nav-right { justify-content: flex-end; }
+
+  /* stacked entries */
+  .entry {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .entries::before { display: none; }
+  .entry .stamp::before { display: none; }
+
+  .filter-bar { flex-wrap: wrap; }
+
+  .section-head {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .section-head .sub { text-align: left; }
+
+  .experience .job {
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+  }
+  .experience .job .when {
+    grid-column: 1 / -1;
+  }
+
+  .foot { grid-template-columns: 1fr; }
+  .case-toc { flex-wrap: wrap; gap: 10px; }
+  .outcomes { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ---- MOBILE (≤600px) ---- */
+
+@media (max-width: 600px) {
+
+  /* nav compact */
+  .nav-status { display: none; }
+  .cmdk-trigger span:first-child { display: none; }
+  .cmdk-trigger { padding: 5px 8px; }
+  .cmdk-trigger .kbd { font-size: 9px; padding: 1px 4px; }
+
+  /* hero meta wraps cleanly */
+  .hero-meta .sep { display: none; }
+
+  /* latest card — full-width CTAs */
+  .latest-card .cta-row {
+    flex-direction: column;
+  }
+  .latest-card .cta-row .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .latest-card .version-line { flex-wrap: wrap; }
+
+  /* filter bar */
+  .filter-bar {
+    top: 43px;
+  }
+  .filter-bar .live-badge { display: none; }
+  .filter-bar .search-wrap {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 6px;
+  }
+  .filter-bar .search-input {
+    width: 100%;
+  }
+  .filter-bar .search-input:focus { width: 100%; }
+
+  /* stamp as inline row */
+  .entry .stamp {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .stamp .type-badge { margin-top: 0; }
+
+  /* about — single column skills */
+  .about-skills {
+    grid-template-columns: 1fr;
+  }
+
+  /* experience — stacked */
+  .experience .job {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    position: relative;
+    padding-right: 60px;
+  }
+  .experience .job .when {
+    grid-column: 1;
+  }
+  .experience .job .badge {
+    position: absolute;
+    right: 0;
+    top: 16px;
+  }
+
+  /* contact channels stack on narrow */
+  .contact-card .channel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+  }
+  .contact-card .channel .val {
+    word-break: break-all;
+  }
+
+  /* footer stack */
+  .foot .copy {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* cmd-k modal */
+  .cmdk-overlay { padding-top: 40px; }
+  .cmdk-modal {
+    width: calc(100vw - 2 * var(--page-px));
+    border-radius: 12px;
+  }
+}
+
+
+/* ---- SMALL MOBILE (≤390px) ---- */
+
+@media (max-width: 390px) {
+  .nav-brand small { display: none; }
+  .nav-right { gap: 8px; }
+  .nav-icon-btn { width: 28px; height: 28px; }
+
+  .outcomes { grid-template-columns: 1fr; }
+}

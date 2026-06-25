@@ -1,0 +1,108 @@
+/* ============================================================
+   ABOUT — bio, skills grid, experience timeline, education
+   ============================================================ */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-grid);
+}
+
+.about-bio p {
+  font-family: var(--font-serif);
+  font-size: clamp(0.875rem, 1vw + 0.6rem, 1.1875rem);
+  line-height: 1.6;
+  color: var(--ink-2);
+  font-weight: 300;
+  margin-bottom: 18px;
+  max-width: 580px;
+}
+
+.about-bio p em { font-style: italic; color: var(--ink); }
+.about-bio p strong { color: var(--accent); font-weight: 500; }
+
+.about-skills {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 30px;
+  max-width: 580px;
+}
+
+.about-skills .col {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+
+.about-skills .col h5 {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+.about-skills .col .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* ---- Experience timeline ---- */
+
+.experience .job {
+  padding: 16px 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 20px;
+}
+
+.experience .job:last-child { border-bottom: 1px solid var(--rule); }
+
+.experience .job .when {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  padding-top: 4px;
+  white-space: nowrap;
+}
+
+.experience .job .role-name {
+  font-family: var(--font-serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.005em;
+}
+
+.experience .job .role-co {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.experience .job .role-blurb {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ink-3);
+  margin-top: 8px;
+  max-width: 460px;
+}
+
+.experience .job .badge {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding-top: 4px;
+}
+
+.education {
+  margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--rule);
+}

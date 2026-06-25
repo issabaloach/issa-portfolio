@@ -1,0 +1,119 @@
+/* ============================================================
+   DESIGN TOKENS
+   Colors, typography, spacing, shadows — single source of truth.
+   ============================================================ */
+
+:root {
+  /* surfaces */
+  --bg:        #faf9f6;
+  --bg-elev:   #ffffff;
+  --bg-soft:   #f3f1ec;
+  --bg-deep:   #ecebe5;
+
+  /* ink */
+  --ink:       #0a0a0a;
+  --ink-2:     #1d1d1b;
+  --ink-3:     #3a3a37;
+  --muted:     #6b6b67;
+  --muted-2:   #9b9a93;
+  --muted-3:   #c6c4ba;
+
+  /* rules / borders */
+  --rule:      #e8e5dd;
+  --rule-2:    #d6d2c6;
+  --rule-3:    #b9b5a8;
+
+  /* accent */
+  --accent:    #ff5500;
+  --accent-2:  #d94600;
+  --accent-soft: #ffece0;
+  --on-accent: #ffffff;
+
+  /* semantic type badges */
+  --shipped-fg:   #8a3614;
+  --shipped-bg:   #fce0d0;
+  --feature-fg:   #1a5d36;
+  --feature-bg:   #d4eddd;
+  --milestone-fg: #ffffff;
+  --milestone-bg: #0a0a0a;
+  --journal-fg:   #4a3578;
+  --journal-bg:   #e7e1f2;
+
+  /* status */
+  --live: #2d8f5f;
+
+  /* shadows */
+  --shadow-sm: 0 1px 2px rgba(20, 18, 10, 0.04);
+  --shadow-md: 0 2px 6px rgba(20, 18, 10, 0.06), 0 1px 2px rgba(20, 18, 10, 0.04);
+  --shadow-lg: 0 18px 60px -20px rgba(20, 18, 10, 0.18), 0 4px 12px rgba(20, 18, 10, 0.05);
+
+  /* spacing — fluid, scales with viewport */
+  --gap: 24px;
+  --radius: 6px;
+  --radius-lg: 14px;
+  --page-px: clamp(28px, 7vw, 40px);
+
+  /* density */
+  --density-pad-y: 28px;
+  --density-pad-x: 28px;
+  --density-text:  14px;
+
+  /* fluid type — scales smoothly between 320px and 1200px viewports */
+  --fs-hero:     clamp(2.4rem, 7vw + 0.5rem, 7.5rem);
+  --fs-h2:       clamp(1.5rem, 3vw + 0.5rem, 2.625rem);
+  --fs-h3:       clamp(1.2rem, 2vw + 0.5rem, 2rem);
+  --fs-tagline:  clamp(0.9rem, 1.5vw + 0.4rem, 1.375rem);
+  --fs-body:     clamp(0.8125rem, 0.5vw + 0.7rem, 0.9375rem);
+  --fs-small:    clamp(0.6875rem, 0.3vw + 0.6rem, 0.8125rem);
+  --fs-mono:     clamp(0.625rem, 0.3vw + 0.5rem, 0.6875rem);
+
+  /* fluid spacing */
+  --space-section: clamp(3rem, 6vw, 6rem);
+  --space-grid:    clamp(1.5rem, 4vw, 3.75rem);
+
+  /* type stacks */
+  --font-serif: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-sans:  "Inter", -apple-system, system-ui, sans-serif;
+  --font-mono:  "JetBrains Mono", "IBM Plex Mono", ui-monospace, monospace;
+
+  /* layout */
+  --content-max: 1180px;
+}
+
+/* ---- DARK THEME ---- */
+[data-theme="dark"] {
+  --bg:        #0d0d0b;
+  --bg-elev:   #181815;
+  --bg-soft:   #1d1d1a;
+  --bg-deep:   #232320;
+
+  --ink:       #efeae0;
+  --ink-2:     #d6d2c8;
+  --ink-3:     #b1ada3;
+  --muted:     #8c8a82;
+  --muted-2:   #5d5b54;
+  --muted-3:   #3a3935;
+
+  --rule:      #25241f;
+  --rule-2:    #34332d;
+  --rule-3:    #45443c;
+
+  --accent-soft: #2b1a0e;
+
+  --shipped-fg:   #ffb988;
+  --shipped-bg:   #2b1a10;
+  --feature-fg:   #8ad6ab;
+  --feature-bg:   #0f2a1a;
+  --milestone-fg: #0d0d0b;
+  --milestone-bg: #efeae0;
+  --journal-fg:   #c5b7e7;
+  --journal-bg:   #1d1730;
+
+  --shadow-lg: 0 18px 60px -20px rgba(0, 0, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-density="compact"] {
+  --density-pad-y: 18px;
+  --density-pad-x: 22px;
+  --density-text:  13px;
+}
