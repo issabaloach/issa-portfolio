@@ -166,3 +166,7 @@
   width: 16px;
   height: 16px;
 }
+
+.mobile-toggle {
+  display: none;
+}

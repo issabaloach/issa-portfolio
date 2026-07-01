@@ -32,8 +32,29 @@
   }
   .hero-stats .item:not(:first-child) { padding-left: 0; }
 
-  /* hide desktop nav links */
-  .nav-links { display: none; }
+  /* mobile nav dropdown */
+  .nav-links { 
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: color-mix(in srgb, var(--bg) 95%, transparent);
+    backdrop-filter: saturate(160%) blur(10px);
+    -webkit-backdrop-filter: saturate(160%) blur(10px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px var(--page-px);
+    border-bottom: 1px solid color-mix(in srgb, var(--rule) 70%, transparent);
+    gap: 16px;
+  }
+  .nav-links.mobile-open {
+    display: flex;
+  }
+  .mobile-toggle {
+    display: grid;
+  }
+
   .nav-inner { grid-template-columns: auto 1fr; }
   .nav-right { justify-content: flex-end; }
 
