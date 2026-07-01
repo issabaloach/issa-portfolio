@@ -11,6 +11,7 @@ import "../styles/responsive.css";
 
 import ClientLayout from "./ClientLayout";
 import Footer from "../components/Footer/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Muhammad Issa - Portfolio",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </ClientLayout>
+        <Analytics />
       </body>
     </html>
   );
