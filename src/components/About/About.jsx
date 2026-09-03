@@ -6,7 +6,7 @@ export default function About() {
       <div className="section-head">
         <h2>About <em>the engineer.</em></h2>
         <p className="sub">
-          Backend-leaning full-stack. MERN + NestJS by trade. Karachi based.
+          Software Engineer - Full Stack Developer. NestJS by trade. Karachi based.
           Likes systems that scale quietly.
         </p>
       </div>

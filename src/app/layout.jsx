@@ -15,7 +15,7 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Muhammad Issa - Portfolio",
-  description: "Backend-leaning full-stack developer based in Karachi.",
+  description: "Software Engineer - Full Stack Developer based in Karachi.",
   icons: {
     icon: "/favicon.svg",
   },

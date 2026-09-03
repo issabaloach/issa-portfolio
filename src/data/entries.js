@@ -1,12 +1,20 @@
 export const ENTRIES = [
   {
+    ver: "v3.7.0",
+    date: "2026-06-20",
+    typ: "shipped",
+    title: "Shipped Flight Balance Pro — aviation load & trim calculator.",
+    project: "flightbalancepro",
+    body: "An offline-first aviation load and trim sheet calculator for ATR 72-600 dispatchers. Pre-flight weight and balance, multi-tier crew loadsheets, and offline reliability.",
+    featured: true,
+  },
+  {
     ver: "v3.6.0",
     date: "2026-05-15",
     typ: "shipped",
     title: "Shipped Bruce Davidson Productions — ebook web app.",
     project: "brucedavidson",
     body: "A full-stack Next.js platform built for an American client to sell and distribute ebooks securely. Integrated with Prisma, NeonDB, NextAuth, and PayPal.",
-    featured: true,
   },
   {
     ver: "v3.5.0",

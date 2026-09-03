@@ -1,9 +1,9 @@
 "use client";
 
 const STATS = [
-  { lab: "products shipped", val: "7", delta: "across 2 years" },
+  { lab: "products shipped", val: "8", delta: "across 2 years" },
   { lab: "production uptime", val: "99.9%", delta: "across all deploys" },
-  { lab: "stack", val: "MERN · NestJS · Py", delta: "backend-leaning full-stack" },
+  { lab: "stack", val: "Full Stack · NestJS · Py", delta: "Software Engineer - Full Stack Developer" },
   { lab: "since", val: "2022", delta: "first commit, BS CS" },
 ];
 
@@ -14,7 +14,7 @@ export default function Hero({ latestEntry, latestProject }) {
         <div className="hero-left">
           <div className="hero-eyebrow">
             <span className="pulse-wrap" />
-            <span>currently shipping · v3.5 in production</span>
+            <span>currently shipping · v3.7 in production</span>
           </div>
 
           <h1 className="hero-name">
@@ -32,7 +32,7 @@ export default function Hero({ latestEntry, latestProject }) {
           <div className="hero-meta">
             <span><b>karachi</b> · pk</span>
             <span className="sep">/</span>
-            <span><b>MERN</b> · <b>NestJS</b></span>
+            <span><b>Software Engineer - Full Stack Developer</b></span>
             <span className="sep">/</span>
             <span>open to remote</span>
             <span className="sep">/</span>

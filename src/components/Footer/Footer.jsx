@@ -7,8 +7,8 @@ export default function Footer() {
     <footer className="foot page">
       <div className="colophon">
         Engineered with <b style={{ color: "var(--ink)" }}>Next.js</b> and{" "}
-        <b style={{ color: "var(--ink)" }}>NestJS</b>. A backend-leaning full-stack developer specializing in the{" "}
-        <b style={{ color: "var(--ink)" }}>MERN stack</b>, robust API design, and building scalable systems. Built quietly in Karachi.
+        <b style={{ color: "var(--ink)" }}>NestJS</b>. A{" "}
+        <b style={{ color: "var(--ink)" }}>Software Engineer - Full Stack Developer</b> specializing in robust API design and building scalable systems. Built quietly in Karachi.
       </div>
 
       <div>

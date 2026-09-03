@@ -1,4 +1,34 @@
 export const PROJECTS = {
+  flightbalancepro: {
+    name: "Flight Balance Pro",
+    tagline: "Offline-first aviation load & trim sheet calculator.",
+    blurb:
+      "A professional aviation load and trim web application engineered for modern airline dispatchers. Delivers precision pre-flight weight and balance calculations, LIZFW/MAC indexing, multi-tier crew loadsheets, and offline PWA reliability.",
+    role: "Full-stack developer",
+    domain: "flightbalancepro.vercel.app",
+    link: "https://flightbalancepro.vercel.app",
+    image: "/images/flightbalancepro.png",
+    year: "2026",
+    stack: ["Next.js", "TypeScript", "NeonDB", "Prisma", "Tailwind", "PWA", "Offline-First", "Vercel"],
+    metrics: [
+      ["aircraft", "ATR 72-600"],
+      ["workflow", "Admin → Crew"],
+      ["loadsheets", "Automated"],
+      ["mode", "Offline PWA"],
+    ],
+    context:
+      "Aviation dispatchers and flight crews require accurate, error-proof weight and balance calculations under tight pre-flight schedules. The app streamlines calculations while ensuring strict safety and balance limits.",
+    approach: [
+      "Engineered automated loadsheet calculations covering dry operating weight, LIZFW, takeoff trim, and MAC% envelopes.",
+      "Architected multi-tier operational workflows across Admin, Dispatcher, Captain, and Crew roles.",
+      "Built as an offline-first Progressive Web App (PWA) to guarantee zero downtime even on aprons with poor connectivity.",
+    ],
+    tradeoffs: [
+      "Targeted the ATR 72-600 airframe profile first to guarantee regulatory compliance before introducing custom fleet configurations.",
+    ],
+    arch: ["Next.js App Router", "PWA Engine", "Load & Trim Calculator", "Offline Cache", "Vercel"],
+  },
+
   brucedavidson: {
     name: "Bruce Davidson Productions",
     tagline: "Ebook web app with integrated payments.",
