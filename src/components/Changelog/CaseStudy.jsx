@@ -24,9 +24,13 @@ export default function CaseStudy({ project }) {
 
       <div className="case-grid">
         <div>
-          <div className="case-screenshot" style={{ padding: project.image ? 0 : undefined, overflow: 'hidden' }}>
+          <div className={`case-screenshot ${project.image ? "has-image" : "no-image"}`}>
             {project.image ? (
-              <img src={project.image} alt={`${project.name} screenshot`} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              <img
+                src={project.image}
+                alt={`${project.name} screenshot`}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
             ) : (
               <span>{project.name} screenshot</span>
             )}
